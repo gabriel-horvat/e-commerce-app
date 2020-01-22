@@ -2,9 +2,9 @@ This is a work in progress :)
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## E-commerce-app w/ React Hooks, Redux-Saga, HOCs
+## E-commerce-app w/ React Hooks, Redux-Saga, GraphQL, Apollo, Context API, Styled-Components, Stripe, PWA-support, Firebase
 
-This is an e-commerce-app using React, Redux, Redux-Saga and React Hooks on the frontend and a basic firebase backend.
+This is an e-commerce-app using React on the frontend and a basic firebase backend.
 
 
 ### How to run the app (statically)
@@ -23,7 +23,7 @@ Run react app on localhost:
 
 
 ### Features (being implemented right now) 
-Register/login/logout as a user (also using Google) <br/> 
+Register/login/logout as a user (also w/ oAuth using Google) <br/> 
 Add items to cart <br/> 
 Increase decrease items in card <br/> 
 Remove items from card <br/> 
