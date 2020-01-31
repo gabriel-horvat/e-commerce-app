@@ -42,12 +42,6 @@ class SignUp extends Component {
             console.log(error);
             
         }
-
-
-        // this.setState({
-        //     email: '',
-        //     password: ''
-        // })
     }
 
     handleChange = async event => {
@@ -56,6 +50,9 @@ class SignUp extends Component {
         this.setState({
             [name]: value
         })
+
+        console.log('handleChange', value, name);
+        
     }
 
     render() {
@@ -84,17 +81,19 @@ class SignUp extends Component {
 
                 <FormInput name = "password"
                  onChange = {this.handleChange}
-                  type = "text"
+                  type = "password"
                   label = 'password'
                    value = {password}
                     required />
 
-                <FormInput name = "cofirm password"
+
+                <FormInput name = "confirmPassword"
                  onChange = {this.handleChange}
-                  type = "text"
-                  label = 'confirm password'
+                  type = "password"
+                  label = 'confirmPassword'
                    value = {confirmPassword}
                     required />
+
 
                 <CustomButton type="submit"> Sign up </CustomButton>
                 
