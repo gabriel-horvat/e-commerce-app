@@ -23,4 +23,8 @@
     ],
     "rules": {
     }
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
 }
