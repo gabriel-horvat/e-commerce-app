@@ -1,19 +1,18 @@
 This is a work in progress :)
 ---
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## E-commerce-app w/ React Hooks, Redux-Saga, GraphQL, Apollo, Context API, Styled-Components, Stripe, PWA-support, Firebase
 
-This is an e-commerce-app using React on the frontend and a basic firebase backend.
+This is an E-commerce-app using React on the frontend and a basic Firebase backend.
 
 
 ### How to run the app (statically)
 
 Clone project: 
-`git clone https://github.com/gabriel-horvat/frontend-airbnb-react.git`
+`git clone https://github.com/gabriel-horvat/e-commerce-app.git`
 
 cd into folder:
-`cd frontend-airbnb-react`
+`cd e-commerce-app`
 
 Download dependencies:
 `npm install`
@@ -31,6 +30,7 @@ Pay for items using stripe <br/>
 TESTS (Jest, Enzyme) <br/> 
 
 ### Live Demo hosted on Heroku
-...Coming soon
+Check it out here:
+https://the-g-store.herokuapp.com/
 
 
