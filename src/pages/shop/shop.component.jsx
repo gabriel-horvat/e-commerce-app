@@ -3,14 +3,12 @@ import CollectionPreview from '../../components/collection-preview/collection-pr
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import {selectCollections} from '../../redux/shop/shop.selectors'
+import {CollectionsOverview} from '../../components/collections-overview/collections-overview.component'
 
 const ShopPage = ({collections}) => 
 (
             <div className = "shop-page">
-                {
-                collections.map(({id, ...otherCollectionProps}) => (
-                    <CollectionPreview key = {id} {...otherCollectionProps} />
-                ))}
+               <CollectionsOverview />
             </div>
         )
 
