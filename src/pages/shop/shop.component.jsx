@@ -3,7 +3,7 @@ import CollectionPreview from '../../components/collection-preview/collection-pr
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import {selectCollections} from '../../redux/shop/shop.selectors'
-import {CollectionsOverview} from '../../components/collections-overview/collections-overview.component'
+import CollectionsOverview from '../../components/collections-overview/collections-overview.component'
 
 const ShopPage = ({collections}) => 
 (
