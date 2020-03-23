@@ -1,10 +1,10 @@
 .collection-item {
-  width: 22%;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   position: relative;
+  width: 22vw;
 
   .image {
     width: 100%;
@@ -21,8 +21,6 @@
     top: 75%;
     left: 10%;
     display: none;
-
-    
   }
 
   &:hover {
