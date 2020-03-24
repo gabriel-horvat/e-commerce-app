@@ -16,6 +16,9 @@ const Header = ({ currentUser, hidden }) => (
       <Logo className="logo" />
     </Link>
     <span className="header-title"> The G Store ✌🏻</span>
+    <span className="navbar-text mr-3">
+      <strong>{currentUser ? `Welcome ${currentUser}` : ""}</strong>
+    </span>
     <div className="options">
       <Link className="option" to="/shop">
         SHOP
