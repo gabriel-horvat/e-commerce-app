@@ -40,6 +40,7 @@ class SignUp extends Component {
         password: "",
         confirmPassword: ""
       });
+      console.log("new user successfully created");
     } catch (error) {
       console.log(error);
     }
