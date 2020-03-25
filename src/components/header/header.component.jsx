@@ -15,7 +15,13 @@ const Header = ({ currentUser, hidden }) => (
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
-    <span className="header-title"> The G Store ✌🏻</span>
+    <span className="header-title">
+      {" "}
+      The G Store
+      <span className="yo-emoji" role="img" aria-label="peace-sign">
+        ✌🏻
+      </span>
+    </span>
     <span className="navbar-text mr-3">
       <strong>{currentUser ? `Welcome ${currentUser}` : ""}</strong>
     </span>
