@@ -23,7 +23,12 @@ const Header = ({ currentUser, hidden }) => (
       </span>
     </span>
     <span className="navbar-text mr-3">
-      <strong>{currentUser ? `Welcome ${currentUser}` : ""}</strong>
+      <strong>
+        {" "}
+        {console.log(currentUser)}
+        {currentUser}
+        {currentUser ? `Welcome ${currentUser}` : ""}
+      </strong>
     </span>
     <div className="options">
       <Link className="option" to="/shop">
@@ -31,7 +36,7 @@ const Header = ({ currentUser, hidden }) => (
       </Link>
 
       {currentUser ? (
-        <Link className="option" onClick={() => auth.signOut()} to="/">
+        <Link className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </Link>
       ) : (
