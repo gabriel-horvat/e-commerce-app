@@ -3,7 +3,11 @@ import React from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
+import {
+  auth,
+  signInWithGoogle,
+  getUserProfileDocument,
+} from "../../firebase/firebase.utils";
 
 import "./sign-in.styles.scss";
 import { withRouter } from "react-router-dom";
@@ -20,10 +24,25 @@ class SignIn extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { email, password, displayName } = this.state;
+    // getUserProfileDocument();
+    const { email, password } = this.state;
 
+    let displayName = "";
     try {
       await auth.signInWithEmailAndPassword(email, password);
+
+      // await auth().onAuthStateChanged(function(user) {
+      //   if (user) {
+      //     // User is signed in.
+      //     const displayName = user.displayName;
+      //     console.log(displayName);
+      //   } else {
+      //     console.log("no user found");
+
+      //     // User is signed out.
+      //   }
+      // });
+
       this.setState({ email: "", password: "" });
       // redirect to home page
       this.props.history.push("/");
