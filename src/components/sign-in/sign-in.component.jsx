@@ -69,9 +69,9 @@ class SignIn extends React.Component {
           <div className="buttons">
             <CustomButton
               type="submit"
-              onClick={() => {
-                history.push("/");
-              }}
+              // onClick={() => {
+              //   history.push("/");
+              // }}
             >
               {" "}
               Sign in{" "}
