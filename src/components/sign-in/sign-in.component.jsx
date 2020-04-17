@@ -6,7 +6,6 @@ import CustomButton from "../custom-button/custom-button.component";
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import "./sign-in.styles.scss";
-import { Redirect } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 class SignIn extends React.Component {
@@ -21,13 +20,14 @@ class SignIn extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { email, password } = this.state;
+    const { email, password, displayName } = this.state;
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: "", password: "" });
       // redirect to home page
       this.props.history.push("/");
+      alert(`Welcome back ${displayName}. Let us know if you need anything :)`);
     } catch (error) {
       console.log(error);
     }
