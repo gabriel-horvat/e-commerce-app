@@ -4,10 +4,6 @@ const INITIAL_STATE = {
   currentUser: null,
 };
 
-// if (currentUser !== null) && isAuth == true {
-//   // redirect to home page
-//   }
-
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case userActionTypes.SET_CURRENT_USER:
