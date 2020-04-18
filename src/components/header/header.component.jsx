@@ -15,7 +15,13 @@ const Header = ({ currentUser, hidden }) => (
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
-    <span className="header-title"> The G Store ✌🏻</span>
+    <span className="header-title">
+      {" "}
+      The G Store
+      <span className="yo-emoji" role="img" aria-label="peace-sign">
+        ✌🏻
+      </span>
+    </span>
     <div className="options">
       <Link className="option" to="/shop">
         SHOP
@@ -38,7 +44,7 @@ const Header = ({ currentUser, hidden }) => (
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden: selectCartHidden
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);

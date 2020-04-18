@@ -10,7 +10,7 @@ const config = {
   storageBucket: "crown-db-28869.appspot.com",
   messagingSenderId: "803209002060",
   appId: "1:803209002060:web:60b8317cf639c210f0c8e9",
-  measurementId: "G-FHFN42WJ27"
+  measurementId: "G-FHFN42WJ27",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -19,10 +19,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   }
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
-
   const snapShot = await userRef.get();
-
-  // console.log(snapShot);
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
@@ -33,13 +30,22 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log("error creating user,", error.message);
     }
   }
   return userRef;
+};
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
 };
 
 firebase.initializeApp(config);
