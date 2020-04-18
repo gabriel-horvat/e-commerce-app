@@ -9,16 +9,23 @@ import { createStructuredSelector } from "reselect";
 import "./header.styles.scss";
 import { selectCartHidden } from "./../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: "Joe Blow",
+    };
+  }
   handleLogout = async (event) => {
     event.preventDefault();
 
     try {
       await auth.signOut();
       alert("You're successfully logged out. See ya again soon!");
-      this.props.history.push("/");
+      // this.props.history.push("/");
     } catch (error) {
       console.log(error);
     }
@@ -40,12 +47,9 @@ class Header extends React.Component {
           </span>
         </span>
         <span className="navbar-text mr-3">
-          <strong>
-            {" "}
-            {console.log(currentUser)}
-            {currentUser}
-            {currentUser ? `Welcome ${currentUser}` : ""}
-          </strong>
+          {" "}
+          {console.log(currentUser)}
+          {currentUser ? `Welcome ${currentUser}` : ""}
         </span>
         <div className="options">
           <Link className="option" to="/shop">
@@ -53,7 +57,7 @@ class Header extends React.Component {
           </Link>
 
           {currentUser ? (
-            <Link className="option" onClick={this.handleLogout}>
+            <Link className="option" to="/" onClick={this.handleLogout}>
               SIGN OUT
             </Link>
           ) : (
@@ -70,8 +74,8 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
+  // currentUser: selectCurrentUser,
   hidden: selectCartHidden,
 });
 
-export default withRouter(connect(mapStateToProps)(Header));
+export default connect(mapStateToProps)(Header);
