@@ -39,26 +39,13 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-export const getUserProfileDocument = (userAuth) => {
-  if (!userAuth) {
-    return;
-  }
-
-  const userRef = firestore.doc(`users/${userAuth.uid}`);
-
-  userRef
-    .get()
-    .then(function(doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    })
-    .catch(function(error) {
-      console.log("Error getting document:", error);
-    });
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
 };
 
 firebase.initializeApp(config);
