@@ -8,6 +8,6 @@ This is an E-commerce-app using React on the frontend and a basic Firebase backe
 
 ### Live Demo hosted on Heroku
 Check it out here:
-https://the-g-store.herokuapp.com/
+www.shopifyclone.xyz
 
 
