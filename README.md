@@ -1,9 +1,9 @@
 This is a work in progress :)
 ---
 
-## E-commerce-app w/ React Hooks, Redux-Saga, GraphQL, Apollo, Context API, Jest, Enzyme, Styled-Components, Stripe, PWA-support, Firebase
+## Shopify clone w/ React Hooks, Redux-Saga, GraphQL, Apollo, Context API, Jest, Enzyme, Styled-Components, Stripe Integration
 
-This is an E-commerce-app using React on the frontend and a basic Firebase backend.
+This is a basic Shopify clone using React on the frontend and a basic Firebase backend.
 
 
 ### Live Demo hosted on Heroku
