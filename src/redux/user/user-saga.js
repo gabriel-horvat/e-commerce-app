@@ -7,6 +7,16 @@ import {
 } from "../../firebase/firebase.utils";
 import { signInSuccess, signInFailure } from "./user.actions";
 
+export function* isUserAuthenticated() {
+  // try {
+  //   const userRef = yield call(createUserProfileDocument, userAuth);
+  //   const userSnapshot = yield userRef.get();
+  //   yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
+  // } catch (error) {
+  //   yield put(signInFailure(error));
+  // }
+}
+
 export function* getSnapshotFromUserAuth(userAuth) {
   try {
     const userRef = yield call(createUserProfileDocument, userAuth);
@@ -41,6 +51,10 @@ export function* onEmailSignInStart() {
 
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle);
+}
+
+export function* onCheckUserSession() {
+  yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
 }
 
 export function* userSagas() {
