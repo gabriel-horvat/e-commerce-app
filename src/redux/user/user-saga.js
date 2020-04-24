@@ -16,7 +16,7 @@ import {
 export function* signOut() {
   try {
     yield auth.signOut();
-    yield put(signOutSuccess);
+    yield put(signOutSuccess());
   } catch (error) {
     yield put(signOutFailure(error));
   }
@@ -82,7 +82,7 @@ export function* userSagas() {
   yield all([
     call(onGoogleSignInStart),
     call(onEmailSignInStart),
-    call(isUserAuthenticated),
+    call(onCheckUserSession),
     call(onSignOutStart),
   ]);
 }
