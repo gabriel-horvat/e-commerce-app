@@ -4,5 +4,5 @@ const selectUser = (state) => state.user;
 
 export const selectCurrentUser = createSelector(
   [selectUser],
-  (user) => user.currrentUser
+  (user) => user.currentUser
 );
