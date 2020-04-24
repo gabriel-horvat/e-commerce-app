@@ -8,6 +8,6 @@ This is a basic Shopify clone using React on the frontend and a basic Firebase b
 
 ### Live Demo hosted on Heroku
 Check it out here:
-www.shopifyclone.xyz
+https://www.shopifyclone.xyz/
 
 
