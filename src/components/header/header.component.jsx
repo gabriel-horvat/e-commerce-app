@@ -18,8 +18,8 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     <span className="header-title">
       {" "}
       The G Store
-      <span className="yo-emoji" role="img" aria-label="peace-sign">
-        ✌🏻
+      <span className="yo-emoji ml-1" role="img" aria-label="peace-sign">
+        👨🏻‍💻
       </span>
     </span>
     <div className="options">
@@ -28,7 +28,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
       </Link>
 
       {currentUser ? (
-        <Link className="option" onClick={signOutStart}>
+        <Link className="option" to="/" onClick={signOutStart}>
           SIGN OUT
         </Link>
       ) : (
