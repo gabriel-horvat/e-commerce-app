@@ -1,4 +1,16 @@
 .collection-item {
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+      button {
+        opacity: unset;
+      }
+    }
+  }
+
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -21,6 +33,13 @@
     top: 75%;
     left: 10%;
     display: none;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+    }
   }
 
   &:hover {
