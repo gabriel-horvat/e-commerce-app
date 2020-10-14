@@ -8,7 +8,7 @@ import CustomButton from "../custom-button/custom-button.component";
 import { signUpStart } from "../../redux/user/user.actions";
 
 import "./sign-up.styles.scss";
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
 
 const SignUp = ({ signUpStart }) => {
