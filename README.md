@@ -14,7 +14,7 @@ This is a basic Shopify clone using _React_ on the frontend and a basic _Firebas
 - _Context-API_ (find it here: https://github.com/gabriel-horvat/context-api-e-commerce-app)
 - _Progressive Web App_
 - _Webpack_ & _Babel_
-- _React_ _Lazy_ & _Suspense_
+- _React_ _LazyLoading_
 - Higher Order Components
 - Authentication
 - Session Storage & Persistance
