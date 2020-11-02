@@ -10,7 +10,6 @@ This is a basic Shopify clone using _React_ on the frontend and a basic _Firebas
 - _Hooks_
 - _Jest_ & _Enzyme_ for testing
 - Stripe Integration
-- _GraphQL_ & _Apollo_ (find it here: https://github.com/gabriel-horvat/graphql-apollo-e-commerce-app )
 - _Context-API_ (find it here: https://github.com/gabriel-horvat/context-api-e-commerce-app)
 - _Progressive Web App_
 - _Webpack_ & _Babel_
